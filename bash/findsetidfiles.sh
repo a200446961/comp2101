@@ -20,7 +20,7 @@ echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 5
 echo ""
 echo "Task to display 12 largest regular files in the system sorted according to their sizes "
-echo "----------------------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------------------"
 echo ""
 find / -type f -exec ls -lh {} + 2> /dev/null |sort -k 5 -hr|head -12|awk '{print $5,$3,$9}'
 # for the task, add
